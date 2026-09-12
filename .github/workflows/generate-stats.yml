@@ -30,13 +30,34 @@ jobs:
         with:
           node-version: 22
 
+      - name: Patch github-readme-stats to remove private fields
+        run: |
+          cd github-readme-stats
+          cat << 'EOF' > patch.js
+          const fs = require('fs');
+          const file = 'src/fetchers/stats.js';
+          let content = fs.readFileSync(file, 'utf8');
+          content = content.replace(/repositoriesContributedTo[^}]+}/g, '');
+          content = content.replace(/pullRequests\(first: 1\)[^}]+}/g, '');
+          content = content.replace(/mergedPullRequests: pullRequests[^}]+}/g, '');
+          content = content.replace(/openIssues: issues[^}]+}/g, '');
+          content = content.replace(/closedIssues: issues[^}]+}/g, '');
+          content = content.replace(/stats\.totalPRs = user\.pullRequests\.totalCount;/g, 'stats.totalPRs = 0;');
+          content = content.replace(/stats\.totalPRsMerged = user\.mergedPullRequests\.totalCount;/g, 'stats.totalPRsMerged = 0;');
+          content = content.replace(/stats\.mergedPRsPercentage =[\s\S]*?;/g, 'stats.mergedPRsPercentage = 0;');
+          content = content.replace(/stats\.totalIssues = user\.openIssues\.totalCount \+ user\.closedIssues\.totalCount;/g, 'stats.totalIssues = 0;');
+          content = content.replace(/stats\.contributedTo = user\.repositoriesContributedTo\.totalCount;/g, 'stats.contributedTo = 0;');
+          fs.writeFileSync(file, content);
+          EOF
+          node patch.js
+
       - name: Install dependencies and start server
         run: |
           cd github-readme-stats
           npm ci
           node express.js &
           sleep 10
-          curl "http://localhost:9000/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true" -o ../github-stats.svg
+          curl "http://localhost:9000/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true&hide=issues,prs,contribs" -o ../github-stats.svg
           curl "http://localhost:9000/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true" -o ../top-langs.svg
           kill %1
         env:
