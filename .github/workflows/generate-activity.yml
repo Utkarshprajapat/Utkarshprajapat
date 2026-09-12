@@ -1,0 +1,32 @@
+name: Generate Contribution Activity
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate activity graph
+        uses: maurodesouza/github-readme-activity-graph-action@v1
+        with:
+          username: Utkarshprajapat
+          options: theme=react-dark&hide_border=true&area=true
+          output_path: github-activity.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push activity graph
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-activity.svg
+          git commit -m "chore: update contribution activity graph"
+          git push

@@ -452,7 +452,7 @@ SEBI Investor Awareness Test — NISM
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Utkarshprajapat&theme=react-dark&hide_border=true&area=true" alt="Contribution Activity Graph"/>
+<img src="github-activity.svg" alt="Contribution Activity Graph">
 
 </div>
 
