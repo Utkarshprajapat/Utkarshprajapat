@@ -20,6 +20,8 @@ INNER_EOF
           curl -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" -X POST -d @query.json https://api.github.com/graphql > query-result.json
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add query-result.json
-          git commit -m "add query result" || echo "No changes"
-          git push || echo "Failed to push"
+          echo "" >> output.txt
+          cat query-result.json >> output.txt
+          git add output.txt
+          git commit -m "add query result"
+          git push
