@@ -42,8 +42,9 @@ jobs:
           sed -i '/pullRequests(first: 1) {/,/}/d' src/Schemas/index.ts
           sed -i 's/userPullRequest.pullRequests.totalCount/0/g' src/user_info.ts
           
-          # Remove dotenv import which might clear env vars
           sed -i '/dotenv/d' render_svg.ts
+          
+          sed -i 's/console.log("Starting trophy render...");/console.log("Starting trophy render..."); console.log("Token length:", Deno.env.get("GITHUB_TOKEN1")?.length);/' render_svg.ts
           
           deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../github-trophy.svg" "discord" > ../output.txt 2>&1 || true
         env:
