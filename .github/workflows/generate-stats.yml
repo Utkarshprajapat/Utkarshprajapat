@@ -38,21 +38,26 @@ jobs:
           sed -i '/mergedPullRequests:/,/}/d' src/fetchers/stats.js
           sed -i '/openIssues: issues/,/}/d' src/fetchers/stats.js
           sed -i '/closedIssues: issues/,/}/d' src/fetchers/stats.js
+          sed -i '/repositoryDiscussions/,/}/d' src/fetchers/stats.js
+          sed -i '/repositoryDiscussionComments/,/}/d' src/fetchers/stats.js
           sed -i 's/stats.totalPRs = user.pullRequests.totalCount;/stats.totalPRs = 0;/g' src/fetchers/stats.js
           sed -i 's/stats.totalPRsMerged = user.mergedPullRequests.totalCount;/stats.totalPRsMerged = 0;/g' src/fetchers/stats.js
           sed -i '/stats.mergedPRsPercentage =/,/100 || 0;/d' src/fetchers/stats.js
           sed -i 's/stats.totalIssues = user.openIssues.totalCount + user.closedIssues.totalCount;/stats.totalIssues = 0;/g' src/fetchers/stats.js
           sed -i 's/stats.contributedTo = user.repositoriesContributedTo.totalCount;/stats.contributedTo = 0;/g' src/fetchers/stats.js
+          sed -i 's/stats.totalDiscussionsStarted = user.repositoryDiscussions.totalCount;/stats.totalDiscussionsStarted = 0;/g' src/fetchers/stats.js
+          sed -i 's/stats.totalDiscussionsAnswered =/stats.totalDiscussionsAnswered = 0; \/\//g' src/fetchers/stats.js
 
       - name: Install dependencies and start server
         run: |
           cd github-readme-stats
           npm ci
           node express.js &
+          PID=$!
           sleep 10
           curl "http://localhost:9000/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true&hide=issues,prs,contribs" -o ../github-stats.svg
           curl "http://localhost:9000/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true" -o ../top-langs.svg
-          kill %1
+          kill $PID
         env:
           PAT_1: ${{ secrets.GITHUB_TOKEN }}
 
