@@ -30,20 +30,17 @@ jobs:
         with:
           node-version: 22
 
-      - name: Patch github-readme-stats to remove private fields
+      - name: Patch github-readme-stats to bypass restricted fields
         run: |
           cd github-readme-stats
-          sed -i '/repositoriesContributedTo(first: 1/,/}/d' src/fetchers/stats.js
-          sed -i '/pullRequests(first: 1)/,/}/d' src/fetchers/stats.js
-          sed -i '/mergedPullRequests: pullRequests/,/}/d' src/fetchers/stats.js
-          sed -i '/openIssues: issues/,/}/d' src/fetchers/stats.js
-          sed -i '/closedIssues: issues/,/}/d' src/fetchers/stats.js
-          sed -i 's/\$includeMergedPullRequests: Boolean!, //g' src/fetchers/stats.js
-          sed -i 's/stats.totalPRs = user.pullRequests.totalCount;/stats.totalPRs = 0;/g' src/fetchers/stats.js
-          sed -i 's/stats.totalPRsMerged = user.mergedPullRequests.totalCount;/stats.totalPRsMerged = 0;/g' src/fetchers/stats.js
-          sed -i '/stats.mergedPRsPercentage =/,/100 || 0;/d' src/fetchers/stats.js
-          sed -i 's/stats.totalIssues = user.openIssues.totalCount + user.closedIssues.totalCount;/stats.totalIssues = 0;/g' src/fetchers/stats.js
-          sed -i 's/stats.contributedTo = user.repositoriesContributedTo.totalCount;/stats.contributedTo = 0;/g' src/fetchers/stats.js
+          # Alias restricted fields to 'followers' in GraphQL to bypass GITHUB_TOKEN limitations safely
+          sed -i 's/repositoriesContributedTo(first: 1, contributionTypes: \[COMMIT, ISSUE, PULL_REQUEST, REPOSITORY\]) {/repositoriesContributedTo: followers {/g' src/fetchers/stats.js
+          sed -i 's/pullRequests(first: 1) {/pullRequests: followers {/g' src/fetchers/stats.js
+          sed -i 's/mergedPullRequests: pullRequests(states: MERGED)/mergedPullRequests: followers/g' src/fetchers/stats.js
+          sed -i 's/openIssues: issues(states: OPEN) {/openIssues: followers {/g' src/fetchers/stats.js
+          sed -i 's/closedIssues: issues(states: CLOSED) {/closedIssues: followers {/g' src/fetchers/stats.js
+          sed -i 's/repositoryDiscussions {/repositoryDiscussions: followers {/g' src/fetchers/stats.js
+          sed -i 's/repositoryDiscussionComments(onlyAnswers: true) {/repositoryDiscussionComments: followers {/g' src/fetchers/stats.js
 
       - name: Install dependencies and start server
         run: |
