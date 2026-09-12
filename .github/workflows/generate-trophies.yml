@@ -36,7 +36,8 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git add github-trophy.svg output.txt || true
+          ls -la > debug.txt
+          git add github-trophy.svg output.txt debug.txt || true
           git commit -m "Update GitHub Trophies" || exit 0
           git push
 
