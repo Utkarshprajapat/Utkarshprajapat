@@ -39,8 +39,8 @@ jobs:
           sed -i 's/mergedPullRequests: pullRequests(states: MERGED)/mergedPullRequests: followers/g' src/fetchers/stats.js
           sed -i 's/openIssues: issues(states: OPEN) {/openIssues: followers {/g' src/fetchers/stats.js
           sed -i 's/closedIssues: issues(states: CLOSED) {/closedIssues: followers {/g' src/fetchers/stats.js
-          sed -i 's/repositoryDiscussions {/repositoryDiscussions: followers {/g' src/fetchers/stats.js
-          sed -i 's/repositoryDiscussionComments(onlyAnswers: true) {/repositoryDiscussionComments: followers {/g' src/fetchers/stats.js
+          sed -i 's/repositoryDiscussions @include/repositoryDiscussions: followers @include/g' src/fetchers/stats.js
+          sed -i 's/repositoryDiscussionComments(onlyAnswers: true) @include/repositoryDiscussionComments: followers @include/g' src/fetchers/stats.js
 
       - name: Install dependencies and start server
         run: |
