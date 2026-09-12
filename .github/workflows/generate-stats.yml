@@ -34,7 +34,7 @@ jobs:
         run: |
           cd github-readme-stats
           # Force fetching only public repositories to prevent Resource not accessible by integration
-          sed -i 's/ownerAffiliations: OWNER, privacy: PUBLIC/ownerAffiliations: OWNER, isFork: false/g' src/fetchers/stats.js
+          sed -i 's/ownerAffiliations: OWNER/ownerAffiliations: OWNER, isFork: false/g' src/fetchers/stats.js
           sed -i 's/repositoriesContributedTo(first: 1, contributionTypes: \[COMMIT, ISSUE, PULL_REQUEST, REPOSITORY\]) {/repositoriesContributedTo: followers {/g' src/fetchers/stats.js
           sed -i 's/pullRequests(first: 1) {/pullRequests: followers {/g' src/fetchers/stats.js
           sed -i 's/mergedPullRequests: pullRequests(states: MERGED)/mergedPullRequests: followers/g' src/fetchers/stats.js
