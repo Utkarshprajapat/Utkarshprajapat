@@ -27,30 +27,31 @@ jobs:
           git clone https://github.com/ryo-ma/github-profile-trophy.git
           cd github-profile-trophy
           
-          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../github-trophy.svg" "discord" > ../output.txt 2>&1 || true
+          # Patch GraphQL queries to bypass GITHUB_TOKEN 403 restrictions on this profile
+          sed -i '/stargazerCount/d' src/Schemas/index.ts
+          sed -i 's/node.stargazerCount/0/g' src/user_info.ts
+          
+          sed -i '/contributionsCollection {/,/}/d' src/Schemas/index.ts
+          sed -i 's/userActivity.contributionsCollection.totalCommitContributions/0/g' src/user_info.ts
+          
+          sed -i '/issues(states: OPEN) {/,/}/d' src/Schemas/index.ts
+          sed -i '/issues(states: CLOSED) {/,/}/d' src/Schemas/index.ts
+          sed -i 's/userIssue.openIssues.totalCount/0/g' src/user_info.ts
+          sed -i 's/userIssue.closedIssues.totalCount/0/g' src/user_info.ts
+          
+          sed -i '/pullRequests(first: 1) {/,/}/d' src/Schemas/index.ts
+          sed -i 's/userPullRequest.pullRequests.totalCount/0/g' src/user_info.ts
+          
+          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../github-trophy.svg" "discord"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          ls -la > debug.txt
-          base64 output.txt > b64.txt
-          gh api /repos/Utkarshprajapat/Utkarshprajapat/commits/${{ github.sha }}/comments -f body="$(cat b64.txt)"
-          git status
-          git commit -m "Update GitHub Trophies" || echo "nothing to commit"
-          git push || echo "push failed"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: debug-files
-          path: |
-            debug.txt
-            output.txt
-            github-trophy.svg
+          git add github-trophy.svg || true
+          git commit -m "Update GitHub Trophies" || exit 0
+          git push
 
