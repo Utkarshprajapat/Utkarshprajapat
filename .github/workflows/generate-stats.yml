@@ -32,22 +32,17 @@ jobs:
 
       - name: Patch github-readme-stats to remove private fields
         run: |
-          node -e "
-            import fs from 'fs';
-            const file = 'github-readme-stats/src/fetchers/stats.js';
-            let content = fs.readFileSync(file, 'utf8');
-            content = content.replace(/repositoriesContributedTo[^}]+}/g, '');
-            content = content.replace(/pullRequests\(first: 1\)[^}]+}/g, '');
-            content = content.replace(/mergedPullRequests: pullRequests[^}]+}/g, '');
-            content = content.replace(/openIssues: issues[^}]+}/g, '');
-            content = content.replace(/closedIssues: issues[^}]+}/g, '');
-            content = content.replace(/stats\.totalPRs = user\.pullRequests\.totalCount;/g, 'stats.totalPRs = 0;');
-            content = content.replace(/stats\.totalPRsMerged = user\.mergedPullRequests\.totalCount;/g, 'stats.totalPRsMerged = 0;');
-            content = content.replace(/stats\.mergedPRsPercentage =[\s\S]*?;/g, 'stats.mergedPRsPercentage = 0;');
-            content = content.replace(/stats\.totalIssues = user\.openIssues\.totalCount \+ user\.closedIssues\.totalCount;/g, 'stats.totalIssues = 0;');
-            content = content.replace(/stats\.contributedTo = user\.repositoriesContributedTo\.totalCount;/g, 'stats.contributedTo = 0;');
-            fs.writeFileSync(file, content);
-          " --input-type=module
+          cd github-readme-stats
+          sed -i '/repositoriesContributedTo/,/}/d' src/fetchers/stats.js
+          sed -i '/pullRequests(first: 1)/,/}/d' src/fetchers/stats.js
+          sed -i '/mergedPullRequests:/,/}/d' src/fetchers/stats.js
+          sed -i '/openIssues: issues/,/}/d' src/fetchers/stats.js
+          sed -i '/closedIssues: issues/,/}/d' src/fetchers/stats.js
+          sed -i 's/stats.totalPRs = user.pullRequests.totalCount;/stats.totalPRs = 0;/g' src/fetchers/stats.js
+          sed -i 's/stats.totalPRsMerged = user.mergedPullRequests.totalCount;/stats.totalPRsMerged = 0;/g' src/fetchers/stats.js
+          sed -i '/stats.mergedPRsPercentage =/,/100 || 0;/d' src/fetchers/stats.js
+          sed -i 's/stats.totalIssues = user.openIssues.totalCount + user.closedIssues.totalCount;/stats.totalIssues = 0;/g' src/fetchers/stats.js
+          sed -i 's/stats.contributedTo = user.repositoriesContributedTo.totalCount;/stats.contributedTo = 0;/g' src/fetchers/stats.js
 
       - name: Install dependencies and start server
         run: |
