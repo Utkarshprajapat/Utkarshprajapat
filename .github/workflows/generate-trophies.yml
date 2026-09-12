@@ -27,7 +27,7 @@ jobs:
           git clone https://github.com/ryo-ma/github-profile-trophy.git
           cd github-profile-trophy
           
-          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../profile/trophy.svg" "discord" > output.txt 2>&1 || true
+          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../github-trophy.svg" "discord" > ../output.txt 2>&1 || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
@@ -36,7 +36,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          git add github-profile-trophy/output.txt profile/trophy.svg || true
+          git add github-trophy.svg output.txt || true
           git commit -m "Update GitHub Trophies" || exit 0
           git push
 
