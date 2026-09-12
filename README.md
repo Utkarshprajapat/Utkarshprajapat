@@ -421,17 +421,25 @@ SEBI Investor Awareness Test — NISM
 
 📊 GitHub Analytics
 
-<div align="center">
+## 📊 GitHub Analytics
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=UtkarshPrajapat&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github&theme=radical" alt="GitHub Stats"/>
+<p align="center">
+  <img 
+    src="https://github-readme-stats.vercel.app/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=C084FC&text_color=E9D5FF"
+    height="180"
+  />
+  <img 
+    src="https://streak-stats.demolab.com?user=Utkarshprajapat&theme=tokyonight&hide_border=true&background=0D1117&ring=A855F7&fire=C084FC&currStreakLabel=C084FC"
+    height="180"
+  />
+</p>
 
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=UtkarshPrajapat&hide_border=true&theme=radical" alt="GitHub Streak"/>
-
-<br/>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=UtkarshPrajapat&layout=compact&hide_border=true&langs_count=8&theme=radical" alt="Top Languages"/>
-
-</div>
+<p align="center">
+  <img 
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=E9D5FF"
+    height="180"
+  />
+</p>
 
 🏅 GitHub Trophies
 
