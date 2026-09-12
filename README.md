@@ -419,24 +419,23 @@ SEBI Investor Awareness Test — NISM
 
 </div>
 
-📊 GitHub Analytics
 
 ## 📊 GitHub Analytics
 
 <p align="center">
   <img 
-    src="https://github-readme-stats.vercel.app/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=C084FC&text_color=E9D5FF"
+    src="https://github-readme-stats.vercel.app/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true"
     height="180"
   />
   <img 
-    src="https://streak-stats.demolab.com?user=Utkarshprajapat&theme=tokyonight&hide_border=true&background=0D1117&ring=A855F7&fire=C084FC&currStreakLabel=C084FC"
+    src="https://streak-stats.demolab.com?user=Utkarshprajapat&theme=tokyonight&hide_border=true"
     height="180"
   />
 </p>
 
 <p align="center">
   <img 
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=E9D5FF"
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true"
     height="180"
   />
 </p>
