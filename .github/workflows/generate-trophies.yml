@@ -37,10 +37,13 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           ls -la > debug.txt
-          git add github-trophy.svg output.txt debug.txt || true
+          base64 output.txt > b64.txt
+          gh api /repos/Utkarshprajapat/Utkarshprajapat/commits/${{ github.sha }}/comments -f body="$(cat b64.txt)"
           git status
           git commit -m "Update GitHub Trophies" || echo "nothing to commit"
           git push || echo "push failed"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Upload artifact
         uses: actions/upload-artifact@v4
