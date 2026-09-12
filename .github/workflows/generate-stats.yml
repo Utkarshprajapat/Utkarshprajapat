@@ -43,6 +43,7 @@ jobs:
           # Bypass contributionsCollection as it may be restricted
           sed -i '/commits: contributionsCollection/,/}/d' src/fetchers/stats.js
           sed -i '/reviews: contributionsCollection/,/}/d' src/fetchers/stats.js
+          sed -i 's/, $startTime: DateTime = null//g' src/fetchers/stats.js
           sed -i 's/stats.totalCommits = user.commits.totalCommitContributions;/stats.totalCommits = 0;/g' src/fetchers/stats.js
           sed -i 's/user.reviews.totalPullRequestReviewContributions/0/g' src/fetchers/stats.js
 
