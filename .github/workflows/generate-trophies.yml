@@ -42,7 +42,7 @@ jobs:
           sed -i '/pullRequests(first: 1) {/,/}/d' src/Schemas/index.ts
           sed -i 's/userPullRequest.pullRequests.totalCount/0/g' src/user_info.ts
           
-          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../github-trophy.svg" "discord"
+          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../github-trophy.svg" "discord" > ../output.txt 2>&1 || true
         env:
           GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
           
