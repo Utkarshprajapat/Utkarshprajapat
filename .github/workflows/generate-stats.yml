@@ -38,6 +38,7 @@ jobs:
           sed -i '/mergedPullRequests: pullRequests/,/}/d' src/fetchers/stats.js
           sed -i '/openIssues: issues/,/}/d' src/fetchers/stats.js
           sed -i '/closedIssues: issues/,/}/d' src/fetchers/stats.js
+          sed -i 's/\$includeMergedPullRequests: Boolean!, //g' src/fetchers/stats.js
           sed -i 's/stats.totalPRs = user.pullRequests.totalCount;/stats.totalPRs = 0;/g' src/fetchers/stats.js
           sed -i 's/stats.totalPRsMerged = user.mergedPullRequests.totalCount;/stats.totalPRsMerged = 0;/g' src/fetchers/stats.js
           sed -i '/stats.mergedPRsPercentage =/,/100 || 0;/d' src/fetchers/stats.js
