@@ -41,7 +41,7 @@ jobs:
           sed -i 's/repositoryDiscussions @include/repositoryDiscussions: followers @include/g' src/fetchers/stats.js
           sed -i 's/repositoryDiscussionComments(onlyAnswers: true) @include/repositoryDiscussionComments: followers @include/g' src/fetchers/stats.js
           # Bypass contributionsCollection as it may be restricted
-          sed -i 's/commits: contributionsCollection/commits: followers/g' src/fetchers/stats.js
+          sed -i 's/commits: contributionsCollection (from: \$startTime)/commits: followers/g' src/fetchers/stats.js
           sed -i 's/stats.totalCommits = user.commits.totalCommitContributions;/stats.totalCommits = 0;/g' src/fetchers/stats.js
           sed -i 's/user.commits.totalPullRequestReviewContributions/0/g' src/fetchers/stats.js
 
