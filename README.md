@@ -4,7 +4,9 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:240046,50:5a189a,100:7b2cbf&height=180&section=header&text=Utkarsh%20Prajapati&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=35"/>
 </a>
 
-Computer Science Undergraduate · Full-Stack Developer · GenAI Explorer
+**Computer Science Undergraduate · Full-Stack Developer · GenAI Explorer**
+
+<br/>
 
 <a href="https://readme-typing-svg.demolab.com">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2800&pause=900&color=C77DFF&center=true&vCenter=true&width=760&lines=Building+real-world+software+and+IoT+solutions;Java+%7C+Python+%7C+JavaScript+%7C+React+%7C+Next.js;Exploring+Spring+Boot%2C+Generative+AI+%26+DSA;Turning+ideas+into+deployed+products" alt="Typing SVG" />
@@ -12,21 +14,11 @@ Computer Science Undergraduate · Full-Stack Developer · GenAI Explorer
 
 <br/>
 
-<a href="https://www.niituiversity.com/">
-  <img src="https://img.shields.io/badge/NIIT%20University-B.Tech%20CSE-5A189A?style=for-the-badge&logo=academia&logoColor=white"/>
-</a>
-<a href="https://www.google.com/maps/search/?api=1&query=Gandhidham%2C%20Gujarat%2C%20India">
-  <img src="https://img.shields.io/badge/Location-Gandhidham%2C%20Gujarat-7B2CBF?style=for-the-badge&logo=googlemaps&logoColor=white"/>
-</a>
-<a href="mailto:utkarshprajapati1023@gmail.com">
-  <img src="https://img.shields.io/badge/Email-Contact%20Me-9D4EDD?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-<a href="https://www.linkedin.com/in/utkarsh-prajapati-958a23292/">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-5A189A?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-<a href="https://github.com/UtkarshPrajapat">
-  <img src="https://img.shields.io/badge/GitHub-UtkarshPrajapat-240046?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
+<a href="https://www.niituiversity.com/"><img src="https://img.shields.io/badge/NIIT%20University-B.Tech%20CSE-5A189A?style=for-the-badge&logo=academia&logoColor=white"/></a>
+<a href="https://www.google.com/maps/search/?api=1&query=Gandhidham%2C%20Gujarat%2C%20India"><img src="https://img.shields.io/badge/Location-Gandhidham%2C%20Gujarat-7B2CBF?style=for-the-badge&logo=googlemaps&logoColor=white"/></a>
+<a href="mailto:utkarshprajapati1023@gmail.com"><img src="https://img.shields.io/badge/Email-Contact%20Me-9D4EDD?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/utkarsh-prajapati-958a23292/"><img src="https://img.shields.io/badge/LinkedIn-Connect-5A189A?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://github.com/UtkarshPrajapat"><img src="https://img.shields.io/badge/GitHub-UtkarshPrajapat-240046?style=for-the-badge&logo=github&logoColor=white"/></a>
 
 <br/><br/>
 
@@ -34,442 +26,220 @@ Computer Science Undergraduate · Full-Stack Developer · GenAI Explorer
 
 </div>
 
-👋 About Me
+## 👋 About Me
 
-I’m Utkarsh Prajapati, a Computer Science undergraduate at NIIT University focused on building practical software products and real-world technology solutions.
+I’m a Computer Science undergraduate at NIIT University focused on building practical software products and real-world technology solutions. I enjoy taking ideas from problem definition to implementation, deployment, and iteration.
 
-My interests span software engineering, full-stack development, Java, Python, Generative AI, and IoT. I enjoy taking an idea from problem definition to implementation, deployment, and iteration.
+My interests span software engineering, full-stack development, Java, Python, Generative AI, and IoT. I have experience building and deploying production-oriented web applications and am currently strengthening my foundation in DSA, OOP, Spring Boot, and Maven.
 
-🎓 B.Tech Computer Science & Engineering — NIIT University
+```yaml
+open_to:
+  - Software Engineering Roles
+  - Full-Stack Development
+  - GenAI / AI Engineering
+  - Open Source Contributions
+```
 
-💻 Building with Java, Python, JavaScript, React.js, Next.js, Firebase, REST APIs and SQL
+## 🛠️ Tech Stack
 
-☕ Currently strengthening DSA, OOP, Spring Boot and Maven
+**Languages**  
+<img src="https://skillicons.dev/icons?i=java,python,js,html,css" height="40" alt="Languages" />
 
-🤖 Exploring Generative AI and Prompt Engineering
+**Frontend**  
+<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind" height="40" alt="Frontend" />
 
-🌐 Experience building and deploying production-oriented web applications
+**Backend / Databases / APIs**  
+<img src="https://skillicons.dev/icons?i=spring,firebase,mysql" height="40" alt="Backend" />  
+`REST APIs` `Firestore` `SQL` `DBMS`
 
-🏆 1st Prize — Tech Tacular, NIIT University
+**AI / Development / Tooling**  
+<img src="https://skillicons.dev/icons?i=git,github,vercel,maven,arduino" height="40" alt="Tools" />  
+`Generative AI` `Prompt Engineering`
 
-🏆 6th Place — Samved Hackathon, MIT-VPU, among 500+ teams
+## 🤖 AI / GenAI Expertise
 
-🌍 Open Source Contributor — ELUSOC 2026, Global Rank #34
+| Domain | Proficiency | Focus |
+|---|---|---|
+| **Generative AI** | Working Knowledge | AI integration and practical application development |
+| **Prompt Engineering** | Working Knowledge | Designing structured prompts and AI-assisted workflows |
+| **AI Integration** | Working Knowledge | Exploring how GenAI can enhance software products |
 
-🚀 Open to software engineering, full-stack development and GenAI opportunities
-
-🛠️ Tech Stack
-
-Languages
-
-<p>
-<img src="https://skillicons.dev/icons?i=java,python,js,html,css,sql" alt="Languages"/>
-</p>
-
-Frontend
-
-<p>
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind" alt="Frontend"/>
-</p>
-
-Backend, Databases & APIs
-
-<p>
-<img src="https://skillicons.dev/icons?i=spring,firebase,mysql" alt="Backend and databases"/>
-</p>
-
-REST APIs · Firestore · DBMS · SQL
-
-AI, Development & Tooling
-
-<p>
-<img src="https://skillicons.dev/icons?i=git,github,vercel,vscode,arduino" alt="Development tools"/>
-</p>
-
-Generative AI · Prompt Engineering · IoT · Maven
-
-🤖 AI / GenAI Expertise
-
-Domain
-
-Proficiency
-
-Focus
-
-Generative AI
-
-Working Knowledge
-
-AI integration and practical application development
-
-Prompt Engineering
-
-Working Knowledge
-
-Designing structured prompts and AI-assisted workflows
-
-AI Integration
-
-Working Knowledge
-
-Exploring how GenAI can enhance software products
-
-🚀 Featured Projects
+## 🚀 Featured Projects
 
 <details>
 <summary><b>FinFlow — MSME Cash Flow Platform</b></summary>
-
 <br/>
-
 A fintech platform focused on helping Indian MSMEs track cash flow, categorize expenses, and improve financial visibility.
 
-Area
-
-Details
-
-Stack
-
-React.js · Firebase · REST APIs · Vercel
-
-Core Features
-
-Cash-flow tracking · Expense categorization · INR dashboards · Plan management
-
-Backend
-
-Firebase Authentication · Real-time Firestore
-
-Deployment
-
-Vercel
-
-Impact
-
-Presented at Rajasthan Startup Summit 2026 and submitted to F6S
-
-Repository
-
-GitHub Profile
+| Area | Details |
+|---|---|
+| **Stack** | React.js, Firebase, REST APIs, Vercel |
+| **Core Features** | Cash-flow tracking, Expense categorization, INR dashboards, Plan management |
+| **Backend** | Firebase Authentication, Real-time Firestore |
+| **Deployment** | Vercel |
+| **Impact** | Presented at Rajasthan Startup Summit 2026 and submitted to F6S |
 
 </details>
 
 <details>
 <summary><b>Shreeji Vastraalay — Production E-Commerce Platform</b></summary>
-
 <br/>
-
 A production-oriented e-commerce platform for devotional products with online ordering and payment integration.
 
-Area
-
-Details
-
-Stack
-
-Next.js 15 · Firebase · Razorpay · Tailwind CSS · Vercel
-
-Core Features
-
-Authentication · Product/order management · Cart · Checkout · Validation
-
-Payments
-
-Razorpay integration
-
-Deployment
-
-Vercel · Custom GoDaddy domain
-
-Security
-
-Revoked an exposed production API key, purged Git history using BFG Repo Cleaner, and migrated secrets to environment variables
-
-SEO
-
-Google Search Console · Google Business Profile
-
-Repository
-
-GitHub Profile
+| Area | Details |
+|---|---|
+| **Stack** | Next.js 15, Firebase, Razorpay, Tailwind CSS, Vercel |
+| **Core Features** | Authentication, Product/order management, Cart, Checkout, Validation |
+| **Payments** | Razorpay integration |
+| **Deployment** | Vercel, Custom GoDaddy domain |
+| **Security** | Revoked an exposed production API key, purged Git history using BFG Repo Cleaner, and migrated secrets to environment variables |
+| **SEO** | Google Search Console, Google Business Profile |
 
 </details>
 
 <details>
 <summary><b>Smart Water Pressure Management System</b></summary>
-
 <br/>
-
 An IoT-based smart-city solution designed to address unequal water pressure across 13 distribution zones for Solapur Municipal Corporation.
 
-Area
-
-Details
-
-Stack
-
-Arduino Uno · PS3 Pressure Sensors · Flow Sensors · IoT
-
-Monitoring
-
-Pressure and dual-flow sensor architecture
-
-Detection
-
-Flow-differential leakage detection
-
-Dashboard
-
-Zone maps · Real-time graphs · Controls · SMS alerts
-
-Recognition
-
-6th Place — Samved Hackathon, MIT-VPU, among 500+ teams
-
-Repository
-
-GitHub Profile
+| Area | Details |
+|---|---|
+| **Stack** | Arduino Uno, PS3 Pressure Sensors, Flow Sensors, IoT |
+| **Monitoring** | Pressure and dual-flow sensor architecture |
+| **Detection** | Flow-differential leakage detection |
+| **Dashboard** | Zone maps, Real-time graphs, Controls, SMS alerts |
+| **Recognition** | 6th Place — Samved Hackathon, MIT-VPU, among 500+ teams |
 
 </details>
 
 <details>
 <summary><b>IoT-Based Animal Tracking & Health Monitoring System</b></summary>
-
 <br/>
-
 An IoT-based project focused on animal tracking and health monitoring.
 
-Area
-
-Details
-
-Domain
-
-IoT · Animal Health Monitoring
-
-Recognition
-
-🥇 1st Prize — Tech Tacular, Sinusoid V8, NIIT University
-
-Repository
-
-GitHub Profile
+| Area | Details |
+|---|---|
+| **Domain** | IoT, Animal Health Monitoring |
+| **Recognition** | 🥇 1st Prize — Tech Tacular, Sinusoid V8, NIIT University |
 
 </details>
 
 <details>
 <summary><b>Aurora Restaurant Website</b></summary>
-
 <br/>
-
 Responsive multi-section promotional website featuring a menu, gallery and reservation call-to-action.
 
-Area
-
-Details
-
-Focus
-
-Responsive Web Development
-
-Performance
-
-Sub-2s load time
-
-Compatibility
-
-Cross-browser compatible
-
-Repository
-
-GitHub Profile
+| Area | Details |
+|---|---|
+| **Focus** | Responsive Web Development |
+| **Performance** | Sub-2s load time |
+| **Compatibility** | Cross-browser compatible |
 
 </details>
 
 <details>
 <summary><b>HealthPlus Healthcare Platform</b></summary>
-
 <br/>
-
 Healthcare services website with doctor profiles, appointment-booking sections and patient testimonials.
 
-Area
-
-Details
-
-Focus
-
-Web Development
-
-Accessibility
-
-95+ Google Lighthouse accessibility score
-
-Repository
-
-GitHub Profile
+| Area | Details |
+|---|---|
+| **Focus** | Web Development |
+| **Accessibility** | 95+ Google Lighthouse accessibility score |
 
 </details>
 
 <details>
 <summary><b>Stone-Paper-Scissors — Java</b></summary>
-
 <br/>
-
 Console-based Java game demonstrating OOP principles, conditional logic and user-input handling.
 
-Area
-
-Details
-
-Language
-
-Java
-
-Concepts
-
-OOP · Conditional Logic · Input Handling
-
-Repository
-
-GitHub Profile
+| Area | Details |
+|---|---|
+| **Language** | Java |
+| **Concepts** | OOP, Conditional Logic, Input Handling |
 
 </details>
 
-💼 Experience
+## 💼 Experience
 
-Software Engineering Intern — Zaalima Development Pvt. Ltd.
+**Software Engineering Intern** — Zaalima Development Pvt. Ltd.<br>
+*May 2026 – June 2026 · Remote*
+- Contributed to VaultCore Financial and ShopScale Fabric, supporting fintech and e-commerce application development.
+- Engineered backend API integrations, relational database components, frontend features and application workflows.
+- Worked with Git workflows, code reviews and sprint planning throughout development cycles.
 
-May 2026 – June 2026 · Remote
+## 🌍 Open Source
 
-Contributed to VaultCore Financial and ShopScale Fabric, supporting fintech and e-commerce application development.
-
-Engineered backend API integrations, relational database components, frontend features and application workflows.
-
-Worked with Git workflows, code reviews and sprint planning throughout development cycles.
-
-🌍 Open Source
-
-ELUSOC 2026 — EduLinkUp Summer of Code
-
-Global Rank #34 · 50 Points · Stone Coder Badge
-
+**ELUSOC 2026 — EduLinkUp Summer of Code**<br>
+*Global Rank #34 · 50 Points · Stone Coder Badge*<br>
 Contributed to the ELUSOC 2026 open-source program and participated from June through August 2026.
 
-🏆 Achievements
+## 🏆 Achievements
 
-<div align="center">
+| Recognition | Details |
+|---|---|
+| 🥇 1st Prize | Tech Tacular Competition — Sinusoid V8, NIIT University |
+| 🏆 6th Place | Samved Hackathon — MIT-VPU, among 500+ teams |
+| 🌍 Global Rank #34 | ELUSOC 2026 — EduLinkUp Summer of Code |
+| 🚀 Finalist | Hack on Titan — Ideakode |
+| 🎯 Qualified | India Invotes Hackathon — National Level |
+| 💼 Startup Summit | Represented FinFlow at Rajasthan Startup Summit 2026 |
 
-Recognition
+## 📜 Certifications & Job Simulations
 
-Details
+**Google Cloud / Generative AI**<br>
+![Introduction to Generative AI](https://img.shields.io/badge/Introduction_to_Generative_AI-Simplilearn_SkillUp-5A189A?style=for-the-badge)
+![Generative AI Studio](https://img.shields.io/badge/Generative_AI_Studio-Simplilearn_SkillUp-5A189A?style=for-the-badge)
 
-🥇 1st Prize
+**Software Engineering**<br>
+![Software Engineering Job Simulation](https://img.shields.io/badge/Software_Engineering_Job_Simulation-JPMorgan_Chase_&_Co._/_Forage-5A189A?style=for-the-badge)
+![Technology Job Simulation](https://img.shields.io/badge/Technology_Job_Simulation-Deloitte_/_Forage-5A189A?style=for-the-badge)
+![Software Development Job Simulation](https://img.shields.io/badge/Software_Development_Job_Simulation-Datacom_/_Forage-5A189A?style=for-the-badge)
 
-Tech Tacular Competition — Sinusoid V8, NIIT University
+**Finance**<br>
+![SEBI Investor Awareness Test](https://img.shields.io/badge/SEBI_Investor_Awareness_Test-NISM-5A189A?style=for-the-badge)
 
-🏆 6th Place
+## 💻 Coding Profile
 
-Samved Hackathon — MIT-VPU, among 500+ teams
-
-🌍 Global Rank #34
-
-ELUSOC 2026 — EduLinkUp Summer of Code
-
-🚀 Finalist
-
-Hack on Titan — Ideakode
-
-🇮🇳 Qualified
-
-India Invotes Hackathon — National Level
-
-💼 Startup Summit
-
-Represented FinFlow at Rajasthan Startup Summit 2026
-
-</div>
-
-📜 Certifications & Job Simulations
-
-Google Cloud / Generative AI
-
-Introduction to Generative AI — Simplilearn SkillUP
-
-Generative AI Studio — Simplilearn SkillUP
-
-Software Engineering
-
-Software Engineering Job Simulation — JPMorgan Chase & Co. / Forage
-
-Technology Job Simulation — Deloitte / Forage
-
-Software Development Job Simulation — Datacom / Forage
-
-Finance
-
-SEBI Investor Awareness Test — NISM
-
-💻 Coding Profile
-
-<div align="center">
-
-<a href="https://leetcode.com/u/utkarsh_prajapati1023/">
-  <img src="https://img.shields.io/badge/LeetCode-utkarsh__prajapati1023-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
-</a>
-
-</div>
-
+[![LeetCode](https://img.shields.io/badge/LeetCode-utkarsh__prajapati1023-FFA116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/utkarsh_prajapati1023/)
 
 ## 📊 GitHub Analytics
 
 <p align="center">
-  <img 
-    src="github-stats.svg"
-    height="180"
-  />
-  <img 
-    src="https://streak-stats.demolab.com?user=Utkarshprajapat&theme=tokyonight&hide_border=true"
-    height="180"
-  />
+  <img src="github-stats.svg" height="180" />
+  <img src="https://streak-stats.demolab.com?user=Utkarshprajapat&theme=tokyonight&hide_border=true" height="180" />
 </p>
 
 <p align="center">
-  <img 
-    src="top-langs.svg"
-    height="180"
-  />
+  <img src="top-langs.svg" height="180" />
 </p>
 
-🏅 GitHub Trophies
+### 🏅 GitHub Trophies
 
 <div align="center">
-
-<img src="github-trophy.svg" alt="GitHub Trophies"/>
-
+  <img src="github-trophy.svg" alt="GitHub Trophies"/>
 </div>
 
-📈 Contribution Activity
+### 📈 Contribution Activity
 
 <div align="center">
-
-<img src="github-activity.svg" alt="Contribution Activity Graph">
-
+  <img src="github-activity.svg" alt="Contribution Activity Graph">
 </div>
 
-🐍 Contribution Snake
+### 🐍 Contribution Snake
 
 <div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake.svg">
-  <img src="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake.svg" alt="Contribution Snake">
-</picture>
-
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake.svg">
+    <img src="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake.svg" alt="Contribution Snake">
+  </picture>
 </div>
 
-🎯 Current Focus
+## 🎯 Current Focus
 
+```yaml
 learning:
   - Data Structures & Algorithms
   - Spring Boot
@@ -492,24 +262,15 @@ open_to:
   - Full-Stack Development Opportunities
   - GenAI / AI Engineering Opportunities
   - Open Source Collaboration
+```
 
-🤝 Connect
+## 🤝 Connect
 
 <div align="center">
-
-<a href="mailto:utkarshprajapati1023@gmail.com">
-<img src="https://img.shields.io/badge/Gmail-Contact%20Me-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-</a>
-<a href="https://www.linkedin.com/in/utkarsh-prajapati-958a23292/">
-<img src="https://img.shields.io/badge/LinkedIn-Utkarsh%20Prajapati-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-</a>
-<a href="https://github.com/UtkarshPrajapat">
-<img src="https://img.shields.io/badge/GitHub-UtkarshPrajapat-181717?style=for-the-badge&logo=github&logoColor=white"/>
-</a>
-<a href="https://leetcode.com/u/utkarsh_prajapati1023/">
-<img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
-</a>
-
+<a href="mailto:utkarshprajapati1023@gmail.com"><img src="https://img.shields.io/badge/Gmail-Contact%20Me-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/utkarsh-prajapati-958a23292/"><img src="https://img.shields.io/badge/LinkedIn-Utkarsh%20Prajapati-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://github.com/UtkarshPrajapat"><img src="https://img.shields.io/badge/GitHub-UtkarshPrajapat-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://leetcode.com/u/utkarsh_prajapati1023/"><img src="https://img.shields.io/badge/LeetCode-Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/></a>
 </div>
 
 <div align="center">
