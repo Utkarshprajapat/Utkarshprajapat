@@ -72,6 +72,7 @@
 [0m[32mDownload[0m https://deno.land/std@0.194.0/_util/asserts.ts
 [0m[32mDownload[0m https://deno.land/std@0.194.0/bytes/copy.ts
 Starting trophy render...
+Token length: 377
 Username: Utkarshprajapat
 Output path: ../github-trophy.svg
 Theme: discord
