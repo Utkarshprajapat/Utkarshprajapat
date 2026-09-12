@@ -61,7 +61,7 @@ jobs:
           node express.js &
           PID=$!
           sleep 10
-          curl "http://localhost:9000/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true&hide=issues,prs,contribs,reviews,commits" -o ../github-stats.svg
+          curl "http://localhost:9000/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true&hide=issues,prs,contribs,reviews,commits,stars" -o ../github-stats.svg
           curl "http://localhost:9000/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true" -o ../top-langs.svg
           kill $PID
         env:
