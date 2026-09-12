@@ -33,7 +33,6 @@ jobs:
       - name: Patch github-readme-stats to bypass restricted fields
         run: |
           cd github-readme-stats
-          # Alias restricted fields to 'followers' in GraphQL to bypass GITHUB_TOKEN limitations safely
           sed -i 's/repositoriesContributedTo(first: 1, contributionTypes: \[COMMIT, ISSUE, PULL_REQUEST, REPOSITORY\]) {/repositoriesContributedTo: followers {/g' src/fetchers/stats.js
           sed -i 's/pullRequests(first: 1) {/pullRequests: followers {/g' src/fetchers/stats.js
           sed -i 's/mergedPullRequests: pullRequests(states: MERGED)/mergedPullRequests: followers/g' src/fetchers/stats.js
@@ -41,6 +40,10 @@ jobs:
           sed -i 's/closedIssues: issues(states: CLOSED) {/closedIssues: followers {/g' src/fetchers/stats.js
           sed -i 's/repositoryDiscussions @include/repositoryDiscussions: followers @include/g' src/fetchers/stats.js
           sed -i 's/repositoryDiscussionComments(onlyAnswers: true) @include/repositoryDiscussionComments: followers @include/g' src/fetchers/stats.js
+          # Bypass contributionsCollection as it may be restricted
+          sed -i 's/commits: contributionsCollection/commits: followers/g' src/fetchers/stats.js
+          sed -i 's/stats.totalCommits = user.commits.totalCommitContributions;/stats.totalCommits = 0;/g' src/fetchers/stats.js
+          sed -i 's/user.commits.totalPullRequestReviewContributions/0/g' src/fetchers/stats.js
 
       - name: Install dependencies and start server
         run: |
@@ -49,7 +52,7 @@ jobs:
           node express.js &
           PID=$!
           sleep 10
-          curl "http://localhost:9000/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true&hide=issues,prs,contribs" -o ../github-stats.svg
+          curl "http://localhost:9000/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true&hide=issues,prs,contribs,reviews&include_all_commits=true" -o ../github-stats.svg
           curl "http://localhost:9000/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true" -o ../top-langs.svg
           kill $PID
         env:
