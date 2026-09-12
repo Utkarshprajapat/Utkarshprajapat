@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
       
@@ -27,7 +29,8 @@ jobs:
           
           # We might need to patch GraphQL queries here if GITHUB_TOKEN has limits
           # But lets test it first!
-          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../profile/trophy.svg" "discord"
+          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../profile/trophy.svg" "discord" > output.txt 2>&1 || true
+          gh api /repos/Utkarshprajapat/Utkarshprajapat/commits/${{ github.sha }}/comments -f body="$(cat output.txt)"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
