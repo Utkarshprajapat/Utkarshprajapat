@@ -47,6 +47,7 @@ jobs:
           sed -i 's/console.log("Starting trophy render...");/console.log("Starting trophy render..."); console.log("Token length:", Deno.env.get("GITHUB_TOKEN1")?.length);/' render_svg.ts
           
           sed -i 's/field: STARGAZERS/field: PUSHED_AT/g' src/Schemas/index.ts
+          sed -i 's/ownerAffiliations: OWNER/ownerAffiliations: OWNER, privacy: PUBLIC/g' src/Schemas/index.ts
           
           deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../github-trophy.svg" "discord" > ../output.txt 2>&1 || true
         env:
