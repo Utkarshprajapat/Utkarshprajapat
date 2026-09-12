@@ -1,0 +1,17 @@
+name: Test GraphQL Query
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test query
+        run: |
+          cat << "INNER_EOF" > query.json
+          {
+            "query": "query userInfo($login: String!, $after: String) { user(login: $login) { repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC, orderBy: {direction: DESC, field: STARGAZERS}, after: $after) { totalCount nodes { name stargazers { totalCount } } } } }",
+            "variables": { "login": "Utkarshprajapat" }
+          }
+INNER_EOF
+          sed -i "s/\$login/\\\\\$login/g" query.json
+          sed -i "s/\$after/\\\\\$after/g" query.json
+          curl -H "Authorization: bearer ${{ secrets.GITHUB_TOKEN }}" -X POST -d @query.json https://api.github.com/graphql
