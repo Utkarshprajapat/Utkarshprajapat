@@ -452,7 +452,7 @@ SEBI Investor Awareness Test — NISM
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=UtkarshPrajapat&bg_color=0d1117&color=c77dff&line=9d4edd&point=e0aaff&area=true&hide_border=true" alt="Contribution Activity Graph"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Utkarshprajapat&theme=react-dark&hide_border=true&area=true" alt="Contribution Activity Graph"/>
 
 </div>
 
@@ -460,7 +460,11 @@ SEBI Investor Awareness Test — NISM
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/UtkarshPrajapat/UtkarshPrajapat/output/github-contribution-grid-snake.svg" alt="Contribution Snake"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake.svg">
+  <img src="https://raw.githubusercontent.com/Utkarshprajapat/Utkarshprajapat/output/github-snake.svg" alt="Contribution Snake">
+</picture>
 
 </div>
 

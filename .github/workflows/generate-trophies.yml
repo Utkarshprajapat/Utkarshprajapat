@@ -1,86 +1,30 @@
 name: Generate GitHub Trophies
+
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *"
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
-      issues: write
+
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Setup Deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
-          
-      - name: Generate Trophy
-        run: |
-          git clone https://github.com/ryo-ma/github-profile-trophy.git
-          cd github-profile-trophy
-          
-          # Patch GraphQL queries to bypass GITHUB_TOKEN 403 restrictions on this profile
-          sed -i '/stargazerCount/d' src/Schemas/index.ts
-          sed -i 's/node.stargazerCount/0/g' src/user_info.ts
-          
-          sed -i '/contributionsCollection {/,/}/d' src/Schemas/index.ts
-          sed -i 's/userActivity.contributionsCollection.totalCommitContributions/0/g' src/user_info.ts
-          
-          sed -i '/issues(states: OPEN) {/,/}/d' src/Schemas/index.ts
-          sed -i '/issues(states: CLOSED) {/,/}/d' src/Schemas/index.ts
-          sed -i 's/userIssue.openIssues.totalCount/0/g' src/user_info.ts
-          sed -i 's/userIssue.closedIssues.totalCount/0/g' src/user_info.ts
-          
-          sed -i '/pullRequests(first: 1) {/,/}/d' src/Schemas/index.ts
-          sed -i 's/userPullRequest.pullRequests.totalCount/0/g' src/user_info.ts
-          
-          sed -i '/dotenv/d' render_svg.ts
-          
-          sed -i 's/console.log("Starting trophy render...");/console.log("Starting trophy render..."); console.log("Token length:", Deno.env.get("GITHUB_TOKEN1")?.length);/' render_svg.ts
-          
-          sed -i 's/field: STARGAZERS/field: PUSHED_AT/g' src/Schemas/index.ts
-          sed -i 's/ownerAffiliations: OWNER/ownerAffiliations: OWNER, privacy: PUBLIC/g' src/Schemas/index.ts
-          
-          # Overwrite request.ts to use native fetch and bypass soxa bugs
-          cat << 'EOF' > src/Services/request.ts
-          import { EServiceKindError, GithubError, ServiceError } from "../Types/index.ts";
-          export async function requestGithubData<T = unknown>(query: string, variables: { [key: string]: string }, token = "") {
-            const actualToken = token || Deno.env.get("GITHUB_TOKEN1");
-            const response = await fetch("https://api.github.com/graphql", {
-              method: "POST",
-              headers: { "Content-Type": "application/json", "Authorization": `bearer ${actualToken}` },
-              body: JSON.stringify({ query, variables })
-            });
-            const responseData = await response.json();
-            if (responseData?.errors?.length) {
-              console.error("GitHub GraphQL errors:", JSON.stringify(responseData.errors, null, 2));
-              throw new Error("GraphQL Error");
-            }
-            return responseData.data.user;
-          }
-          EOF
-          
-          deno run --allow-net --allow-env --allow-read --allow-write render_svg.ts "Utkarshprajapat" "../github-trophy.svg" "discord" > ../output.txt 2>&1 || true
-        env:
-          GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Commit and Push
-        run: |
-          cat ../output.txt || true
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
-          rm -rf github-profile-trophy
-          rm -f latest_output.txt output.txt
-          git add -A
-          git commit -m "Update GitHub Trophies" || exit 0
-          git push
 
+      - name: Generate trophy
+        uses: soulteary/github-profile-trophy-action@v1.0.0
+        with:
+          options: 'username=Utkarshprajapat&theme=discord&column=6&row=3&margin-w=10&margin-h=10'
+          path: github-trophy.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit trophy
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add github-trophy.svg
+          git commit -m "chore: update github trophies" || exit 0
+          git push
