@@ -35,6 +35,9 @@ jobs:
           cd github-readme-stats
           # Force fetching only public repositories to prevent Resource not accessible by integration
           sed -i 's/ownerAffiliations: OWNER/ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC/g' src/fetchers/stats.js
+          # Bypass stargazers which is restricted for this token on some repos
+          sed -i '/stargazers {/,/}/d' src/fetchers/stats.js
+          sed -i 's/return prev + curr.stargazers.totalCount;/return prev;/g' src/fetchers/stats.js
           sed -i 's/repositoriesContributedTo(first: 1, contributionTypes: \[COMMIT, ISSUE, PULL_REQUEST, REPOSITORY\]) {/repositoriesContributedTo: followers {/g' src/fetchers/stats.js
           sed -i 's/pullRequests(first: 1) {/pullRequests: followers {/g' src/fetchers/stats.js
           sed -i 's/mergedPullRequests: pullRequests(states: MERGED)/mergedPullRequests: followers/g' src/fetchers/stats.js
