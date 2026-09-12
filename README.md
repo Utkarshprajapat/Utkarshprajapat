@@ -424,7 +424,7 @@ SEBI Investor Awareness Test — NISM
 
 <p align="center">
   <img 
-    src="https://github-readme-stats.vercel.app/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true"
+    src="github-stats.svg"
     height="180"
   />
   <img 
@@ -435,7 +435,7 @@ SEBI Investor Awareness Test — NISM
 
 <p align="center">
   <img 
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true"
+    src="top-langs.svg"
     height="180"
   />
 </p>

@@ -1,0 +1,51 @@
+name: Generate GitHub Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Runs every day at midnight
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Checkout github-readme-stats
+        uses: actions/checkout@v4
+        with:
+          repository: anuraghazra/github-readme-stats
+          path: github-readme-stats
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies and start server
+        run: |
+          cd github-readme-stats
+          npm ci
+          node express.js &
+          sleep 10
+          curl "http://localhost:9000/api?username=Utkarshprajapat&show_icons=true&theme=tokyonight&hide_border=true" -o ../github-stats.svg
+          curl "http://localhost:9000/api/top-langs/?username=Utkarshprajapat&layout=compact&theme=tokyonight&hide_border=true" -o ../top-langs.svg
+          kill %1
+        env:
+          PAT_1: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit and push generated SVGs
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add github-stats.svg top-langs.svg
+          git commit -m "chore: update GitHub stats SVGs" || exit 0
+          git push
