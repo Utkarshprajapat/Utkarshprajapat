@@ -1,0 +1,11 @@
+name: Test Env
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          if [ -z "$GITHUB_TOKEN1" ]; then echo "EMPTY"; else echo "NOT EMPTY"; fi
+        env:
+          GITHUB_TOKEN1: ${{ secrets.GITHUB_TOKEN }}
+
