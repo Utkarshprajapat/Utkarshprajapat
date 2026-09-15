@@ -1,0 +1,32 @@
+<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #C77DFF; }
+    .stat { font: 700 28px 'Segoe UI', Ubuntu, Sans-Serif; fill: #ffffff; }
+    .label { font: 400 14px 'Segoe UI', Ubuntu, Sans-Serif; fill: #9D4EDD; }
+    .border { fill: #1a1b27; stroke: none; }
+  </style>
+  <rect x="0.5" y="0.5" rx="4.5" height="194" stroke="none" width="494" class="border" />
+  <g transform="translate(25, 35)">
+    <text x="0" y="0" class="title">GitHub Contribution Stats</text>
+  </g>
+  
+  <g transform="translate(0, 95)">
+    <!-- Total Contributions -->
+    <g transform="translate(80, 0)">
+      <text x="0" y="0" class="stat" text-anchor="middle">552</text>
+      <text x="0" y="25" class="label" text-anchor="middle">Total Contributions</text>
+    </g>
+    
+    <!-- Current Streak -->
+    <g transform="translate(247, 0)">
+      <text x="0" y="0" class="stat" text-anchor="middle">1</text>
+      <text x="0" y="25" class="label" text-anchor="middle">Current Streak</text>
+    </g>
+    
+    <!-- Longest Streak -->
+    <g transform="translate(415, 0)">
+      <text x="0" y="0" class="stat" text-anchor="middle">31</text>
+      <text x="0" y="25" class="label" text-anchor="middle">Longest Streak</text>
+    </g>
+  </g>
+</svg>

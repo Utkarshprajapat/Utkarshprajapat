@@ -165,7 +165,7 @@ Global Rank #34 · 50 Points · Stone Coder Badge
 ### 📊 GitHub Analytics
 <p align="center">
   <img src="github-stats.svg" height="180" />
-  <img src="https://streak-stats.demolab.com?user=Utkarshprajapat&theme=tokyonight&hide_border=true" height="180" />
+  <img src="github-contributions.svg" height="180" />
 </p>
 <p align="center">
   <img src="top-langs.svg" height="180" />
