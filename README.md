@@ -6,7 +6,7 @@
 
 <table align="center" border="0" style="width: 100%; border-collapse: collapse;">
   <tr>
-    <td align="center" style="border: none;">
+    <td align="center" width="65%" style="border: none;">
       <b>Computer Science Undergraduate · Full-Stack Developer · GenAI Explorer</b><br><br>
       <a href="https://readme-typing-svg.demolab.com">
         <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2800&pause=900&color=C77DFF&center=true&vCenter=true&width=760&lines=Building+real-world+software+and+IoT+solutions;Java+%7C+Python+%7C+JavaScript+%7C+React+%7C+Next.js;Exploring+Spring+Boot%2C+Generative+AI+%26+DSA;Turning+ideas+into+deployed+products" alt="Typing SVG" />
@@ -18,8 +18,8 @@
       <a href="https://github.com/UtkarshPrajapat"><img src="https://img.shields.io/badge/GitHub-UtkarshPrajapat-240046?style=for-the-badge&logo=github&logoColor=white"/></a><br><br>
       <img src="https://komarev.com/ghpvc/?username=UtkarshPrajapat&style=for-the-badge&color=7B2CBF&label=PROFILE+VIEWS" alt="Profile views"/>
     </td>
-    <td align="center" style="border: none;">
-      <img src="img.png" width="220" style="border-radius: 50%;" />
+    <td align="center" width="35%" style="border: none;">
+      <img src="./img.png" width="360" alt="Utkarsh Prajapati" style="border-radius: 12px;" />
     </td>
   </tr>
 </table>
